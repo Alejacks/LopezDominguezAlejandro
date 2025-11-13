@@ -1,0 +1,11 @@
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    @for(pizza of pizzas(); track $index) {
+    <div class="col">
+        <app-pizza-card [pizza]="pizza" (orderPizza)="orderPizza.emit($event)">
+        </app-pizza-card>
+    </div>
+    }
+    <div *ngIf="pizzas().length === 0" class="col-12 alert alert-info text-center">
+        No hay pizzas disponibles en el menú.
+    </div>
+</div>
