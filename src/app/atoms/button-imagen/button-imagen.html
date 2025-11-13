@@ -1,0 +1,5 @@
+<button type="button" class="btn btn-secondary d-inline-flex align-items-center gap-2 py-1 px-2"
+    (click)="handleClick()">
+    <img [src]="imageSrc()" [alt]="text()" class="img-fluid" style="width: 20px; height: 20px; object-fit: contain;" />
+    <span>{{ text() }}</span>
+</button>
